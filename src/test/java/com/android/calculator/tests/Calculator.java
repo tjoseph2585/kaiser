@@ -18,11 +18,6 @@ public class Calculator extends BaseTest {
 
 	private static Logger logger = Logger.getLogger(Calculator.class);
 	
-	public static final String CALCULATOR_PLUS = "input#account-input-email";
-	public static final String CALCULATOR_MINUS = "input#account-input-email";
-	public static final String CALCULATOR_MULTIPLY = "input#account-input-email";
-	public static final String CALCULATOR_DIVIDE = "input#account-input-email";
-	
 	public static Logger getLogger() {
         return logger;
     }
