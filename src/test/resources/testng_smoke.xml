@@ -1,0 +1,22 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="project" parallel="methods" thread-count="4">
+	
+	<parameter name="config-files"  value="src/test/resources/default.properties"/>
+	
+	<groups>
+      <run>
+         <include name="smoke" />
+         <exclude name="validation" />
+         <exclude name="regression"/>
+      </run>        
+    </groups>
+    
+	<test name="project">
+		<classes>	
+			<class name="com.android.calculator.tests.Calculator" />
+		</classes>
+	</test>
+
+</suite>

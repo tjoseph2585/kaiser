@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="calulator" parallel="methods" thread-count="5">
+
+	<test name="Calculator">
+		<classes>	
+			<class name="com.android.calculator.tests.Calculator" />
+		</classes>
+	</test>
+
+</suite>
