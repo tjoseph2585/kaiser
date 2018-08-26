@@ -10,7 +10,6 @@ Steps to run and tests:
 
 5. Install Appium desktop and start appium 
 
-6. Run tests in Maven - go to folder where pom.xml is located and enter command in Terminal:
-   $ mvn test
+6. Run tests in eclispe or cmd line mvn test 
 
 Note: Will be using the build in caluculor in android simulator
