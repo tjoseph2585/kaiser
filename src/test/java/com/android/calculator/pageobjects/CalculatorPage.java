@@ -10,9 +10,9 @@ public class CalculatorPage {
 
 	//calculator identifier
 	public static final String CALCULATOR_ADD = "com.android.calculator2:id/op_add";
-	public static final String CALCULATOR_MINUS = "com.android.calculator2:id/op_subtract";
-	public static final String CALCULATOR_MUTIPLY = "com.android.calculator2:id/mutiply";
-	public static final String CALCULATOR_DIVIDE = "com.android.calculator2:id/divide";
+	public static final String CALCULATOR_MINUS = "com.android.calculator2:id/op_sub";
+	public static final String CALCULATOR_MUTIPLY = "com.android.calculator2:id/op_mul";
+	public static final String CALCULATOR_DIVIDE = "com.android.calculator2:id/op_div";
 	public static final String CALCULATOR_EQUAL = "com.android.calculator2:id/eq";
 	public static final String CALCULATOR_DIGIT = "com.android.calculator2:id/digit_";
 	public static final String CALCULATOR_OUTPUT_WINDOW = "android.widget.EditText";
