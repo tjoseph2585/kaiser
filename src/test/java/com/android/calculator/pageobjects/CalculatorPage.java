@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 
 import com.calculator.util.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class CalculatorPage {
 
@@ -16,22 +17,21 @@ public class CalculatorPage {
 	public static final String CALCULATOR_EQUAL = "com.android.calculator2:id/eq";
 	public static final String CALCULATOR_DIGIT = "com.android.calculator2:id/digit_";
 	public static final String CALCULATOR_OUTPUT_WINDOW = "android.widget.EditText";
-	
+	public static final String CALCULATOR_CLEAR = "com.android.calculator2:id/clr";
 	
 	private static Logger logger = Logger.getLogger(CalculatorPage.class);
 	public static Logger getLogger() {
         return logger;
 	}
 
-	AndroidDriver driver;
-	public CalculatorPage(AndroidDriver driver) {
+	AppiumDriver driver;
+	public CalculatorPage(AppiumDriver driver) {
 		this.driver=driver;
 	 }
 	
-	public String enterCalculator(String number1, String number2, String Operation) throws Exception {
+	public String enterCalculator(String number1, String Operation,  String number2) throws Exception {
 		
 		driver.findElementById(CALCULATOR_DIGIT + number1).click();
-		driver.findElementById(CALCULATOR_DIGIT + number2).click();
 		
 		switch (Operation) {
         case "add":
@@ -54,9 +54,14 @@ public class CalculatorPage {
             throw new Exception("unknowm operation");
         }
 		
-		driver.findElementById(CALCULATOR_EQUAL).click();
+		driver.findElementById(CALCULATOR_DIGIT + number2).click();
 		
+		driver.findElementById(CALCULATOR_EQUAL).click();
+		Thread.sleep(4000);
 		String result = driver.findElement(By.className(CALCULATOR_OUTPUT_WINDOW)).getText();
+		
+		driver.findElementById(CALCULATOR_CLEAR).click();
+	
 		
 		return result;
 		
